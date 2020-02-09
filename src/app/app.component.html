@@ -1,0 +1,16 @@
+<div>
+	<div style="text-align:center">
+		<h1>
+			{{name}}
+		</h1>
+
+		<div class="tab">
+			<button class="tablinks" (click)="tabName = 'Barcode'">Barcode</button>
+			<button class="tablinks" (click)="tabName = 'QRcode'">QRcode</button>
+		</div>
+
+		<app-barcode *ngIf="tabName == 'Barcode'"></app-barcode>
+		<app-qrcode *ngIf="tabName == 'QRcode'"> </app-qrcode>
+
+	</div>
+</div>

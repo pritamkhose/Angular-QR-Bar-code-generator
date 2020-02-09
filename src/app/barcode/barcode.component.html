@@ -1,0 +1,67 @@
+<div>
+	<div style="text-align:center">
+		<ngx-barcode6 [bc-format]="selectedBarcodeObj.value" [bc-width]="selectedWidth" [bc-height]="selectedHeight"
+			[bc-font-size]="selectedFontSize" [bc-value]="userInput" [bc-display-value]="true">
+		</ngx-barcode6>
+		<p>Example : {{selectedBarcodeObj.example}}</p>
+	</div>
+
+	<div class="optionblock">
+		<div class="selection">
+			<label for="barcode">Barcode Data:</label>
+			<input class="form-control" id="userInput" name="userInput" type="text" [(ngModel)]="userInput" value="1234"
+				placeholder="Enter Barcode" autofocus="">
+		</div>
+
+			<div class="selection">
+				<label for="barcode">Barcode format:
+				<select name="barcode" id="barcode" [(ngModel)]="selectedBarcodeObj">
+					<option [ngValue]="i" *ngFor="let i of barcodeObjs">{{i.name}}</option>
+				</select>
+			</label>
+			</div>
+			<div class="selection">
+				<label for="width">Line width:
+				<select name="width" id="width" [(ngModel)]="selectedWidth">
+					<option [ngValue]="j" *ngFor="let j of widths">{{ j }}</option>
+				</select>
+			</label>
+			</div>
+			<div class="selection">
+				<label for="heigth">Heigth:
+				<select name="heigth" id="heigth" [(ngModel)]="selectedHeight">
+					<option [ngValue]="i" *ngFor="let i of heights">{{ i }}</option>
+				</select>
+			</label>
+			</div>
+			<div class="selection">
+				<label for="fontSize">Font Size:
+				<select name="fontSize" id="fontSize" [(ngModel)]="selectedFontSize">
+					<option [ngValue]="i" *ngFor="let i of fontSizes">{{ i }}</option>
+				</select>
+			</label>
+			</div>
+			<!-- <div style="text-align:center">
+				{{selectedBarcodeObj | json}}
+			</div> -->
+		</div>
+
+
+		<br/>
+		<li><a href="https://www.npmjs.com/package/ngx-barcode6">NPM ngx-barcode6</a></li>
+		<br/>
+		<li><a href=" https://github.com/efgiese/ngx-barcode6/tree/master/src/app">Github ngx-barcode6</a></li>
+		<br/>
+		<li><a href="https://lindell.me/JsBarcode/generator/">JsBarcode</a></li>
+		<br/>
+		<li><a href="https://www.npmjs.com/package/angularx-qrcode">NPM angularx-qrcode</a></li>
+		<br/>
+		<li><a href="https://stackblitz.com/edit/angular-qrcode-generator?file=src%2Fapp%2Fapp.component.ts">QR code
+				example</a></li>
+		<br/>
+		<li><a href="https://stackblitz.com/angular/dnbdbappjgqj?file=src%2Fmain.ts">tab example</a></li>
+		<br/>
+		<li><a href=" https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_tabs">w3schools tab example</a></li>
+
+
+	</div>
